@@ -28,11 +28,11 @@
         <h:form>
             <h:commandButton value="Cadastrar" action="#{clubeCinemaBean.reset()}" />
             <h:panelGrid columns="3" style="height: 100px; width: 500px" rendered="#{clubeCinemaBean.cadastrar}">
-                <h:outputText value="Título *" />
-                <h:inputText id="títuloInputText" required="true" value="clubeCinemaBean.filme.título" requiredMessage="título não preenchido" />
+                <h:outputText value="Título *"/>
+                <h:inputText id="títuloInputText" required="true" value="#{clubeCinemaBean.filme.título}" requiredMessage="título não preenchido" />
                 <h:message for="títuloInputText" styleClass="mensagem_erro" />
-                <h:outputText value="Diretor *" />
-                <h:inputText id="diretorInputText" required="true" value="clubeCinemaBean.filme.diretor" requiredMessage="diretor não preenchido" />
+                <h:outputText value="Diretor *"/>
+                <h:inputText id="diretorInputText" required="true" value="#{clubeCinemaBean.filme.diretor}" requiredMessage="diretor não preenchido" />
                 <h:message for="diretorInputText" styleClass="mensagem_erro" />
                 
                 <h:outputText value="Ano *"/>
