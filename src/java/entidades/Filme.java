@@ -20,6 +20,14 @@ public class Filme {
         
     }
     
+    public Filme(String título, String diretor, String ano, String gênero, String oscarMelhorFilme){
+        this.título = título;
+        this.diretor = diretor;
+        this.ano = ano;
+        this.gênero = gênero;
+        this.oscarMelhorFilme = oscarMelhorFilme;
+    }
+      
     public String toString(boolean sem_diretor){
         if(sem_diretor) return ano + " - " + título + " - " + oscarMelhorFilme;
         else return ano + " - " + título + " - " + diretor + " - " + oscarMelhorFilme;
