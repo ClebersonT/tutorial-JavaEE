@@ -7,7 +7,7 @@
     <h:head>
         <f:facet name="first">
             <meta content='text/html; charset=UTF-8' http-equiv="Content-Type" />
-            <title>Facelet Title</title>
+            <title>Pesquisa</title>
         </f:facet>
         <h:outputStylesheet name="style.css" library="css" />
         <h:outputStylesheet name="default.css" library="css" />
@@ -19,22 +19,22 @@
             <h:panelGrid columns="3" style="height: 50px; width: 300px;">
                 <h:outputText value="Selecione um diretor *" />
                 <h:selectOneMenu id="diretorSelectOneMenu" required="true"
-                                 value="#{clubeCinemaBean.diretorSelecionado}"
+                                 value="#{clubeCinemaDBBean.diretorSelecionado}"
                                  requiredMessage="diretor não selecionado" style="width: 100px;">
-                    <f:selectItems value="#{clubeCinemaBean.getDiretoresItens()}" />
+                    <f:selectItems value="#{clubeCinemaDBBean.getDiretoresItens()}" />
                 </h:selectOneMenu>
                  <h:message for="diretorSelectOneMenu" styleClass="mensagem_erro" />
             </h:panelGrid>
-            <h:commandButton value="Pesquisar" action="#{clubeCinemaBean.pesquisarFilme()}" />
+            <h:commandButton value="Pesquisar" action="#{clubeCinemaDBBean.pesquisarFilme()}" />
         </h:form>
-        <h:panelGrid rendered="#{clubeCinemaBean.pesquisar}">
+        <h:panelGrid rendered="#{clubeCinemaDBBean.pesquisar}">
             <h:form>
                 <h:outputFormat value="Filmes dirigidos por {0}" styleClass="mensagem">
-                    <f:param value="#{clubeCinemaBean.diretorSelecionado}" />
+                    <f:param value="#{clubeCinemaDBBean.diretorSelecionado}" />
                 </h:outputFormat>
             </h:form>
             <ul>
-                <ui:repeat value="#{clubeCinemaBean.getInfoFilmesDiretor()}" var="info_filme">
+                <ui:repeat value="#{clubeCinemaDBBean.getInfoFilmesDiretor()}" var="info_filme">
                     <li>#{info_filme}</li>
                 </ui:repeat>
             </ul>

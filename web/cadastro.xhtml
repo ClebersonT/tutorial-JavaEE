@@ -15,29 +15,32 @@
     <h:body>
         <h3>Cadastro de Filmes</h3>
         <h:form>
-            <!--<h:commandButton value="Cadastrar" action="#{clubeCinemaBean.reset()}" />-->
-            <h:panelGrid columns="3" style="height: 100px; width: 500px;" rendered="#{clubeCinemaBean.cadastrar}">
+            <h:panelGrid columns="3" style="height: 100px; width: 500px;">
                 <h:outputText value="Título *"/>
-                <h:inputText id="títuloInputText" required="true" value="#{clubeCinemaBean.filme.título}" requiredMessage="título não preenchido" />
-                <h:message for="títuloInputText" styleClass="mensagem_erro" />requiredMessage
+                <h:inputText id="títuloInputText" required="true" 
+                             value="#{clubeCinemaDBBean.filme.título}" 
+                             requiredMessage="título não preenchido"/>
+                <h:message for="títuloInputText" styleClass="mensagem_erro" />
                 <h:outputText value="Diretor *"/>
-                <h:inputText id="diretorInputText" required="true" value="#{clubeCinemaBean.filme.diretor}" requiredMessage="diretor não preenchido" />
+                <h:inputText id="diretorInputText" required="true"
+                             value="#{clubeCinemaDBBean.filme.diretor}"
+                             requiredMessage="diretor não preenchido" />
                 <h:message for="diretorInputText" styleClass="mensagem_erro" />
                 
                 <h:outputText value="Ano *"/>
-                <h:inputText id="anoInputText" required="true" value="#{clubeCinemaBean.filme.ano}" requiredMessage="ano não preenchido" validatorMessage="formato incorreto do ano">
+                <h:inputText id="anoInputText" required="true" value="#{clubeCinemaDBBean.filme.ano}" requiredMessage="ano não preenchido" validatorMessage="formato incorreto do ano">
                     <f:validateRegex pattern="\d{4}" />
                 </h:inputText>
                 <h:message for="anoInputText" styleClass="mensagem_erro" />
                 
                  <h:outputText value="Gênero *"/>
-                 <h:selectOneMenu id="gêneroInputText" required="true" value="#{clubeCinemaBean.filme.gênero}" requiredMessage="gênero não selecionado">
+                 <h:selectOneMenu id="gêneroInputText" required="true" value="#{clubeCinemaDBBean.filme.gênero}" requiredMessage="gênero não selecionado">
                     <f:selectItem itemValue="ação" itemLabel="Ação"/>
                     <f:selectItem itemValue="aventura" itemLabel="Aventura"/>
                     <f:selectItem itemValue="comédia" itemLabel="Comédia"/>
                     <f:selectItem itemValue="drama" itemLabel="Drama"/>
                  </h:selectOneMenu> 
-                <h:selectOneRadio id="oscar_melhor_filmeSelectOneRadio" required="true" value="#{clubeCinemaBean.filme.oscarMelhorFilme}"
+                <h:selectOneRadio id="oscar_melhor_filmeSelectOneRadio" required="true" value="#{clubeCinemaDBBean.filme.oscarMelhorFilme}"
                                   requiredMessage="opção para oscar de melhor filme não selecionada">
                     <f:selectItem itemValue="não indicado" itemLabel="Não Indicado"/>
                     <f:selectItem itemValue="indicado" itemLabel="Indicado"/>
@@ -47,7 +50,7 @@
             </h:panelGrid>
             
             <h:panelGrid>
-                <h:commandButton value="Inserir" action="#{clubeCinemaBean.cadastrarFilme()}" />
+                <h:commandButton value="Inserir" action="#{clubeCinemaDBBean.cadastrarFilme()}" />
             </h:panelGrid>
             <p><h:outputLink value="index.xhtml">Visualizar Filmes</h:outputLink></p>
         </h:form>
