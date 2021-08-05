@@ -1,5 +1,6 @@
 # :coffee: Tutorial JavaEE
-https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white
+<img alt="JAVA" src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white">
+
 ## :boom: Instalando e Configurando o Ambiente de Desenvolvimento de Aplicações Web
 - Antes de prosseguir tenha previamente instalado o SGBD (Sistema de Gerenciamento de Banco de Dados) MySql
 
