@@ -63,3 +63,14 @@ Abra o navegador e execute o seu projeto
  - localhost:/8080/ClubeCinema
 
 OBS: para qualquer alteração no seu projeto gere novamente o arquivo war e repita o processo de distribuição e execução
+
+## :camera: Prints da Aplicação
+<hr>
+<img alt="tela" src="https://ik.imagekit.io/cleber/filmes-cadastrados_nu1byTdjc.PNG?updatedAt=1628131892724">
+
+<hr>
+<img alt="tela" src="https://ik.imagekit.io/cleber/cadastro-filmes_wfFOsDRCb.PNG?updatedAt=1628131892657">
+
+<hr>
+<img alt="tela" src="https://ik.imagekit.io/cleber/pesquisar_vEgg3VTHxH.PNG?updatedAt=1628131892713">
+
